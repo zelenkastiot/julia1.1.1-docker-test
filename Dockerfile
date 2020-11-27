@@ -144,10 +144,11 @@ RUN cd $HOME/work;\
                 nbconvert; \
     python -m sos_notebook.install;\
     jupyter labextension install --minimize=False jupyterlab-sos; \
-    git clone --single-branch -b master https://github.com/zelenkastiot/julia1.1.1-docker-test.git; \
-    cd julia1.1.1-docker-test;\
-    chmod -R 777 $HOME/work/julia1.1.1-docker-test
+    git clone --single-branch -b master https://github.com/StevenWhitaker/STFR-MWF.git \
+    cd STFR-MWF;\
+    chmod -R 777 $HOME/work/STFR-MWF; \
+    julia -e 'include("setup.jl")'
     
-WORKDIR $HOME/work/julia1.1.1-docker-test
+WORKDIR $HOME/work/STFR-MWF
 
 USER $NB_UID
