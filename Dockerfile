@@ -147,7 +147,7 @@ RUN cd $HOME/work;\
     git clone https://github.com/StevenWhitaker/STFR-MWF.git; \
     cd STFR-MWF;\
     chmod -R 777 $HOME/work/STFR-MWF; \
-    julia -e 'include("setup.jl")'
+    /opt/julia-1.1.1/bin/julia -e 'include("setup.jl")'
     
 WORKDIR $HOME/work/STFR-MWF
 
